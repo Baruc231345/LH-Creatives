@@ -1,0 +1,162 @@
+/* Base Styles */
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+
+body {
+  margin: 0;
+  font-family: Helvetica;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes at least full viewport height */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+
+main {  
+  margin-top: 0px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+.container1 {
+  grid-column: span 12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Optional: Add background color */
+}
+
+.headerImage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.headerImage img {
+  width: 100%;
+  height: auto; /* Maintain the image’s aspect ratio */
+  display: block; /* Remove any extra space below the image */
+}
+
+header {
+    position: sticky;
+    top: 0; /* This ensures the header sticks at the top */
+    z-index: 1000; /* Ensures the header stays above other content */
+    padding: 0px 40px;
+    background: yellow;
+    align-items: center;
+}
+
+
+header h1 {
+  grid-column: 2 / span 3;
+}
+
+header nav {
+  grid-column: 6 / span 6;
+  justify-self: end;
+}
+
+header nav a {
+  color: black;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+footer {
+  padding: 0px 40px;
+  background: yellow;
+  align-items: center;
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+
+footer h1 {
+  grid-column: 2 / span 3;
+}
+
+footer p {
+  grid-column: span 7;
+  justify-self: end;
+}
+
+.form-container {
+    grid-column: span 12; /* Make the entire form span across 12 columns */
+    max-height: 900px;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    gap: 30px;
+}
+
+.login-form {
+    background-color: aqua;
+    max-width: 300px;
+    width: 100%;
+    max-height: 900px;
+    height: 100%;
+
+
+}
+
+  
+
+.username-form,
+.password-form,
+.bottom-form {
+    grid-column: span 12; /* Each section takes up the entire row */
+}
+
+.login-indicator {
+    grid-column: span 12;
+    display: none;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.login-indicator.success {
+    background-color: green; /* Green for success */
+}
+
+.login-indicator.failure {
+    background-color: red; /* Red for failure */
+}                                                                                                                   
+
+.login-form input,
+.login-form button {
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form input {
+
+}
+
+.login-form button {
+  background-color: yellow;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 955px) {
+  /* Add media queries if needed */
+}
+
+@media screen and (max-width: 645px) {
+  /* Add media queries if needed */
+}
