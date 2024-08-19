@@ -2,13 +2,18 @@
 body {
   margin: 0;
   font-family: Helvetica;
-  background: #f5f5f5;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
+  gap: 40px;
+}
+
+.grid-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
 }
 
 header h1,
@@ -25,7 +30,7 @@ header {
 }
 
 header h1 {
-  grid-column: 2 / span 3;
+  grid-column: 2 / span 2;
 }
 
 header nav {
@@ -48,21 +53,25 @@ header nav {
   display: none;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.5);
-  padding-left: 30px;
   position: fixed;
   top: 50px;
   left: 0;
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(200vh - 50px);
   z-index: 1000;
-  gap: 5px;
+  font-size: 16px;
+  padding-top: 10px;
 }
 
 .drawer a {
+  padding-top: 10px;
+  padding-left: 30px;
   color: yellow;
-  margin-left: 10px;
   text-decoration: none;
-  border: 10px solid red;
+  border-bottom: 1px solid rgb(96, 96, 96);
+  display: flex;
+  height: 40px;
+  display: flex;
 }
 
 header nav a {
@@ -91,14 +100,26 @@ main {
   margin: 0px auto;
   max-width: 1600px;
   margin-top: 0px;
-  margin-bottom: 60px;
   padding-bottom: 20px;
 }
 
 .container1 {
   grid-column: span 12;
-  overflow: hidden;
   background-color: red;
+}
+
+.imageslider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.imageslider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1px;
 }
 
 
@@ -107,17 +128,70 @@ main {
   position: relative;
 }
 
-.imageslider {
+.container3 {
+  grid-column: span 12;
+  position: relative;
   display: flex;
-  width: 100%;
-  height: auto;
+  justify-content: center;
+  align-items: center;
 }
 
-.imageslider img {
+
+.newscontainer {
+  display: grid;
   width: 100%;
-  object-fit: fill;
-  border-radius: 1px;
+  max-width: 1000px;
+  margin: 0 20px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
+
+.container4 {
+  grid-column: span 12;
+  position: relative;
+}
+
+.item {
+  grid-template-columns: repeat(12, 1fr); 
+  border-bottom: 2px solid rgb(230, 230, 230);
+  display: grid;    
+  align-items: center; 
+}
+
+.special-pink, .special-blue {
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  width: 100px;
+  grid-column: 1 / span 1;
+}
+
+.special-pink {
+  background-color: #E3007F;
+}
+
+.special-blue {
+  background-color: #009FE8;
+}
+
+.date {
+  grid-column: 3 / span 2; 
+  justify-content: center;
+  align-items: center;
+}
+
+.long-text{
+  grid-column: 5 / span 9;
+  font-size: 16px;
+}
+
+
 
 .aboutuscontainer {
   width: 100%;
@@ -130,6 +204,55 @@ main {
   object-fit: cover;
   display: block;
 }
+
+.contactcontainer h1{
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 46px;
+
+}
+
+.contactcontainer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.contactcontainer img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contactcontainer .gray-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  background: #CCCCCC;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactcontainer p {
+  font-size: 46px;
+  text-align: center;
+  color: #333333;
+}
+
 
 .aboutuscontainer .text-overlay {
   position: absolute;
@@ -165,6 +288,30 @@ main > b {
   font-size: 46px;
   padding-top: 20px;
 }
+
+main > h1 {
+  grid-column: span 12;
+  text-align: center;
+  font-size: 16px;
+  width: 150px; /* Adjust the width to your preference */
+  margin: 0 auto; /* This centers the h1 element */
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  cursor: pointer;
+  box-shadow: 10px 10px #000;
+}
+
+main > h1:hover {
+  background-color: #ffffff; 
+  transform: scale(1.95); 
+}
+
+main > h1:active {
+  transform: scale(2.00); 
+}
+
+
 
 .card {
   grid-column: span 3;
@@ -209,6 +356,14 @@ main > b {
     align-items: center;
   }
 
+  .contactcontainer .gray-overlay {
+
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 340px;
+  }
+
   .aboutuscontainer h1 {
     font-size: 40px;
   }
@@ -224,18 +379,16 @@ main > b {
   }
 }
 
-@media screen and (max-width: 429px) {
-  header h1 {
-    grid-column: 2 / span 3;
-  }
-
-  header nav {
-    display: none;
-    justify-content: end;
-  }
-}
-
 @media screen and (max-width: 774px) {
+
+  .contactcontainer .gray-overlay {
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    max-height: 100px;
+  }
+
+
   header nav {
     display: none;
     grid-column: 7 / span 6;
@@ -251,8 +404,51 @@ main > b {
 
   .drawer a {
     display: block;
-    margin: 10px 0;
   }
+
+  .grid-header {
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .newscontainer{
+    max-width: 600px;
+  }
+
+  
+  .special-blue, .special-pink{
+    grid-column: 2 / span 1;
+  }
+
+  .date{
+    grid-column: 4 / span 6;
+  }
+
+  .long-text{
+    grid-column: 2 / span 10;
+  }
+
+  .aboutuscontainer h1 {
+    font-size: 36px;
+  }
+
+  
+  .contactcontainer h1 {
+    font-size: 36px;
+  }
+
+  .contactcontainer p{
+    font-size: 36px;
+  }
+
+  main > b {
+    font-size: 38px;
+  }
+
+
+  
+  
 }
 
 @media screen and (max-width: 645px) {
@@ -294,15 +490,6 @@ main > b {
   }
 
   .aboutuscontainer .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
     width: 100%;
     max-width: 450px;
     height: 100%;
@@ -310,8 +497,30 @@ main > b {
     align-items: center;
   }
 
+  .contactcontainer{
+    height: 500px;
+  }
+
+  .contactcontainer .gray-overlay {
+
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    max-height: 200px;
+
+  }
+
   .aboutuscontainer h1 {
-    font-size: 30px;
+    font-size: 32px;
+  }
+
+  
+  .contactcontainer h1 {
+    font-size: 32px;
+  }
+
+  .contactcontainer p{
+    font-size: 32px;
   }
 
   main > b {
@@ -324,90 +533,59 @@ main > b {
     padding: 3px;
     font-size: 16px;
   }
-}
-
-@media screen and (max-width: 320px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-  }
-
-  .container1 {
-    grid-column: span 12;
-    height: 300px;
-    max-width: 500px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .imageslider {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-
-  .imageslider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1px;
-  }
-
-  .container2 {
-    grid-column: span 12;
-    position: relative;
-    overflow: hidden;
-    background-color: brown;
-    min-height: 400px;
-  }
-
-  .aboutuscontainer {
-    position: relative;
-    height: 100%;
-  }
-
-  .aboutuscontainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 
   .aboutuscontainer .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    max-width: 300px;
-    width: 90%;
-    height: auto;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    max-height: 250px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 466px) {
+  .contactcontainer .gray-overlay {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 200px;
+  }
+}
+
+@media screen and (max-width: 441px) {
+  body{
+    width: 500px;
   }
 
-  .aboutuscontainer h1 {
-    font-size: 25px;
+  .contactcontainer .gray-overlay {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 200px;
+  }
+  
+}
+
+@media (max-width: 320px) {
+  .aboutuscontainer .text-overlay {
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    max-height: 350px;
   }
 
-  main > b {
-    font-size: 30px;
+  .contactcontainer{
+    height: 500px;
+  }
+  
+
+  .contactcontainer .gray-overlay {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    max-height: 350px;
+
   }
 
-  .aboutuscontainer p {
-    line-height: 1.2;
-    padding: 3px;
-    font-size: 14px;
-  }
 
-  .card {
-    grid-column: span 12;
-    padding: 5px 10px;
-  }
 }

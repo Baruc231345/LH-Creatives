@@ -12,24 +12,25 @@
 <body>
     <button id="prevBtn">Prev</button>
     <button id="nextBtn">Next</button>
-    <header class="grid">
+
+    <header class="grid-header">
         <h1>Dummy</h1>
         <nav>
-            <a class="active" href="#">Service</a>
-            <a href="#">About Us</a>
-            <a href="#">News</a>
-            <a href="#">Contact</a>
+            <a class="active">Service</a>
+            <a class="about">About Us</a>
+            <a class="news">News</a>
+            <a class="contact">Contact</a>
             <a href="/login">Sign In</a>
         </nav>
 
         <div class="hamburger" onclick="toggleDrawer()">
-            <i class="fas fa-bars"></i> 
+            <i class="fas fa-bars"></i>
         </div>
         <div class="drawer" id="drawer">
-            <a class="active" href="#">Service</a>
-            <a href="#">About Us</a>
-            <a href="#">News</a>
-            <a href="#">Contact</a>
+            <a class="active">Service</a>
+            <a class="about">About Us</a>
+            <a class="news">News</a>
+            <a class="contact">Contact</a>
             <a href="/login">Sign In</a>
         </div>
     </header>
@@ -44,7 +45,8 @@
                 <img src="/assets/visual/slide01.jpg" id="firstImage" alt="">
             </div>
         </div>
-        <b>Service</b>
+
+        <b id="serviceSection">Service</b>
         <div class="card">
             <img src="/assets/service/service-desc01.jpg" alt="">
             <h3>Service 2</h3>
@@ -70,7 +72,7 @@
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
         </div>
 
-        <div class="container2">
+        <div class="container2" id="aboutSection">
             <div class="aboutuscontainer">
                 <img src="/assets/aboutus/background.jpg" alt="">
                 <div class="text-overlay">
@@ -82,9 +84,55 @@
                 </div>
             </div>
         </div>
+
+        <b id="newsSection">News</b>
+        <div class="container3">
+            <div class="newscontainer">
+                <div class="item">
+                    <p class="special-pink">Information</p>
+                    <p class="date">2018.04-18</p>
+                    <p class="long-text">Something news title is here, this is dummy text. Something news title is here,
+                        this is dummy text. </p>
+                </div>
+                <div class="item">
+                    <p class="special-blue">Recruit</p>
+                    <p class="date">2018.04-18</p>
+                    <p class="long-text">Something news title is here, this is dummy text. Something news title is here,
+                        this is dummy text. </p>
+                </div>
+                <div class="item">
+                    <p class="special-pink">Information</p>
+                    <p class="date">2018.04-18</p>
+                    <p class="long-text">Something news title is here, this is dummy text. Something news title is here,
+                        this is dummy text. </p>
+                </div>
+                <div class="item">
+                    <p class="special-blue">Recruit</p>
+                    <p class="date">2018.04-18</p>
+                    <p class="long-text">Something news title is here, this is dummy text. Something news title is here,
+                        this is dummy text. </p>
+                </div>
+                <div class="item">
+                    <p class="special-pink">Information</p>
+                    <p class="date">2018.04-18</p>
+                    <p class="long-text">Something news title is here, this is dummy text. Something news title is here,
+                        this is dummy text. </p>
+                </div>
+            </div>
+        </div>
+        <h1>Show News List</h1>
+        <div class="container4" id="contactSection">
+            <div class="contactcontainer">
+                <img src="/assets/contact/background.jpg" alt="">
+                <h1>Contact</h1>
+                <div class="gray-overlay">
+                    <p>GoogleMap</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="grid">
+    <footer class="grid-header">
         <h1>Dummy</h1>
         <p>(c) Dummy</p>
     </footer>
