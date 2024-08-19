@@ -1,4 +1,3 @@
-/* Base Styles */
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
 body {
   margin: 0;
@@ -40,7 +39,7 @@ header nav {
 }
 
 .hamburger {
-  display: none; /* Hidden by default */
+  display: none;
   cursor: pointer;
   font-size: 24px;
 }
@@ -48,26 +47,23 @@ header nav {
 .drawer {
   display: none;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+  background: rgba(0, 0, 0, 0.5);
   padding-left: 30px;
   position: fixed;
-  top: 50px; /* This should be the exact height of your header */
+  top: 50px;
   left: 0;
-  width: 100%;  
-  height: calc(100vh - 50px); /* Full viewport height minus the header height */
+  width: 100%;
+  height: calc(100vh - 50px);
   z-index: 1000;
   gap: 5px;
-  
 }
 
-
-.drawer a{
+.drawer a {
   color: yellow;
   margin-left: 10px;
   text-decoration: none;
   border: 10px solid red;
 }
-
 
 header nav a {
   color: black;
@@ -79,7 +75,7 @@ footer {
   padding: 0px 40px;
   background: yellow;
   align-items: center;
-  margin-top: auto; /* Pushes footer to the bottom */
+  margin-top: auto;
 }
 
 footer h1 {
@@ -101,9 +97,13 @@ main {
 
 .container1 {
   grid-column: span 12;
-  height: 100%;
-  max-height: 10000px;
   overflow: hidden;
+}
+
+
+.container2 {
+  grid-column: span 12;
+  position: relative;
 }
 
 .imageslider {
@@ -118,21 +118,16 @@ main {
   border-radius: 1px;
 }
 
-.container2 {
-  grid-column: span 12;
-  position: relative; /* Allow positioning of child elements */
-}
-
 .aboutuscontainer {
   width: 100%;
   height: auto;
-  position: relative; /* Position relative for absolute positioning of text */
+  position: relative;
 }
 
 .aboutuscontainer img {
   width: 100%;
   object-fit: cover;
-  display: block; /* Remove extra space below image */
+  display: block;
 }
 
 .aboutuscontainer .text-overlay {
@@ -140,13 +135,13 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* Adjust text color for contrast */
+  color: white;
   text-align: center;
-  padding: 5px; /* Add padding for better visibility */
-  background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-  border-radius: 8px; /* Optional: rounded corners */
-  width: 100%; /* Adjust width of the text-overlay */
-  max-width: 1500px; /* Optional: maximum width */
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1500px;
   height: 100%;
   max-height: 600px;
   justify-content: center;
@@ -187,13 +182,12 @@ main > b {
   object-fit: cover;
 }
 
-/* Media Queries */
 @media screen and (max-width: 955px) {
   .container1 {
     overflow: hidden;
   }
   .card {
-    grid-column: span 6; /* 2 cards per row */
+    grid-column: span 6;
     padding: 7px 30px;
   }
 
@@ -202,13 +196,13 @@ main > b {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* Adjust text color for contrast */
+    color: white;
     text-align: center;
-    padding: 5px; /* Add padding for better visibility */
-    background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-    border-radius: 8px; /* Optional: rounded corners */
-    width: 100%; /* Adjust width of the text-overlay */
-    max-width: 700px; /* Optional: maximum width */
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px;
     height: 100%;
     max-height: 400px;
     align-items: center;
@@ -229,33 +223,29 @@ main > b {
   }
 }
 
-@media screen and (max-width: 429) {
-  header h1{
+@media screen and (max-width: 429px) {
+  header h1 {
     grid-column: 2 / span 3;
   }
 
   header nav {
-    display: none; 
+    display: none;
     justify-content: end;
   }
-
-
-  
 }
+
 @media screen and (max-width: 774px) {
-  /*dito tayo maglalagay ng drawer*/
   header nav {
-    display: none; 
+    display: none;
     grid-column: 7 / span 6;
   }
 
-  header h1{
+  header h1 {
     grid-column: 2 / span 9;
   }
 
   .hamburger {
-    display: block; /* Show hamburger icon */
-
+    display: block;
   }
 
   .drawer a {
@@ -263,6 +253,7 @@ main > b {
     margin: 10px 0;
   }
 }
+
 @media screen and (max-width: 645px) {
   .container1 {
     overflow: hidden;
@@ -272,30 +263,31 @@ main > b {
     grid-column: 5 / span 7;
     justify-self: end;
   }
+
   .card {
-    grid-column: span 12; /* 1 card per row */
+    grid-column: span 12;
     padding: 5px 50px;
   }
 
   .container2 {
-    grid-column: span 12; /* Ensure it spans the full width */
-    position: relative; /* Position context for absolute child elements */
+    grid-column: span 12;
+    position: relative;
     overflow: hidden;
     background-color: brown;
-    min-height: 400px; /* Ensure a minimum height */
+    min-height: 400px;
   }
 
   .aboutuscontainer {
-    position: relative; /* Position context for absolute child elements */
-    height: 100%; /* Ensure it takes the full height of its parent */
+    position: relative;
+    height: 100%;
   }
 
   .aboutuscontainer img {
     width: 100%;
-    height: 100%; /* Ensure the image covers the container */
-    object-fit: cover; /* Maintain aspect ratio while covering the container */
-    display: block; /* Remove any extra space below the image */
-    position: absolute; /* Position image absolutely to fill the container */
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
     top: 0;
     left: 0;
   }
@@ -305,13 +297,13 @@ main > b {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* Adjust text color for contrast */
+    color: white;
     text-align: center;
-    padding: 5px; /* Add padding for better visibility */
-    background: rgba(0, 0, 0, 0.1); /* Optional: semi-transparent background */
-    border-radius: 8px; /* Optional: rounded corners */
-    width: 100%; /* Adjust width of the text-overlay */
-    max-width: 450px; /* Optional: maximum width */
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
     height: 100%;
     max-height: 250px;
     align-items: center;
@@ -332,53 +324,54 @@ main > b {
     font-size: 16px;
   }
 }
+
 @media screen and (max-width: 320px) {
   .grid {
-    grid-template-columns: repeat(1, 1fr); /* 1 column layout */
-    gap: 10px; /* Adjust gap */
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
   }
 
   .container1 {
     grid-column: span 12;
-    height: 300px; /* Set a fixed height for smaller screens */
+    height: 300px;
     max-width: 500px;
     width: 100%;
     overflow: hidden;
-    position: relative; /* Ensure child elements are positioned relative to this container */
+    position: relative;
   }
 
   .imageslider {
     display: flex;
     width: 100%;
-    height: 100%; /* Ensure it fills the container height */
+    height: 100%;
   }
 
   .imageslider img {
     width: 100%;
-    height: 100%; /* Ensure images fill the slider height */
-    object-fit: cover; /* Adjust to cover the container without distortion */
+    height: 100%;
+    object-fit: cover;
     border-radius: 1px;
   }
 
   .container2 {
-    grid-column: span 12; /* Ensure it spans the full width */
-    position: relative; /* Position context for absolute child elements */
+    grid-column: span 12;
+    position: relative;
     overflow: hidden;
     background-color: brown;
-    min-height: 400px; /* Ensure a minimum height */
+    min-height: 400px;
   }
 
   .aboutuscontainer {
-    position: relative; /* Position context for absolute child elements */
-    height: 100%; /* Ensure it takes the full height of its parent */
+    position: relative;
+    height: 100%;
   }
 
   .aboutuscontainer img {
     width: 100%;
-    height: 100%; /* Ensure the image covers the container */
-    object-fit: cover; /* Maintain aspect ratio while covering the container */
-    display: block; /* Remove any extra space below the image */
-    position: absolute; /* Position image absolutely to fill the container */
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
     top: 0;
     left: 0;
   }
@@ -388,27 +381,32 @@ main > b {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* Adjust text color for contrast */
+    color: white;
     text-align: center;
-    padding: 5px; /* Add padding for better visibility */
-    background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-    border-radius: 8px; /* Optional: rounded corners */
-    max-width: 300px; /* Adjust maximum width */
-    width: 90%; /* Ensure the text-overlay is responsive */
-    height: auto; /* Allow height to adjust based on content */
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    max-width: 300px;
+    width: 90%;
+    height: auto;
   }
 
   .aboutuscontainer h1 {
-    font-size: 25px; /* Adjust font size */
+    font-size: 25px;
   }
 
   main > b {
-    font-size: 30px; /* Adjust font size */
+    font-size: 30px;
   }
 
   .aboutuscontainer p {
     line-height: 1.2;
     padding: 3px;
-    font-size: 14px; /* Adjust font size */
+    font-size: 14px;
+  }
+
+  .card {
+    grid-column: span 12;
+    padding: 5px 10px;
   }
 }
