@@ -98,6 +98,7 @@ main {
 .container1 {
   grid-column: span 12;
   overflow: hidden;
+  background-color: red;
 }
 
 
