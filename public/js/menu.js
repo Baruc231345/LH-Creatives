@@ -42,11 +42,9 @@ carouselSlide.addEventListener("transitionend", () => {
 });
 
 window.addEventListener("DOMContentLoaded", function () {
-  // Remove the checkbox and label from the DOM initially
   const check = document.getElementById("check");
   const checkbtn = document.querySelector(".checkbtn");
 
-  // Function to add elements back when screen is 320px or less
   function toggleHamburgerMenu() {
     if (window.innerWidth <= 320) {
       if (!document.body.contains(check)) {
@@ -61,7 +59,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Run on load and resize
   toggleHamburgerMenu();
   window.addEventListener("resize", toggleHamburgerMenu);
 });
@@ -72,40 +69,37 @@ function toggleDrawer() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll("nav a");
-    
-    const serviceSection = document.getElementById("serviceSection");
-    const aboutSection = document.getElementById("aboutSection"); 
-    const newsSection = document.getElementById("newsSection");   
-    const contactSection = document.getElementById("contactSection");
+  const navLinks = document.querySelectorAll("nav a");
+  const serviceSection = document.getElementById("serviceSection");
+  const aboutSection = document.getElementById("aboutSection");
+  const newsSection = document.getElementById("newsSection");
+  const contactSection = document.getElementById("contactSection");
 
-    function handleScroll(targetSection) {
-      targetSection.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-
-    navLinks.forEach(link => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        switch (link.className) {
-          case 'active':
-            handleScroll(serviceSection);
-            break;
-          case 'about':
-            handleScroll(aboutSection);
-            break;
-          case 'news':
-            handleScroll(newsSection);
-            break;
-          case 'contact':
-            handleScroll(contactSection);
-            break;
-          default:
-            console.error('Section not found.');
-        }
-      });
+  function handleScroll(targetSection) {
+    targetSection.scrollIntoView({
+      behavior: "smooth",
     });
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      switch (link.className) {
+        case "active":
+          handleScroll(serviceSection);
+          break;
+        case "about":
+          handleScroll(aboutSection);
+          break;
+        case "news":
+          handleScroll(newsSection);
+          break;
+        case "contact":
+          handleScroll(contactSection);
+          break;
+        default:
+          window.location.href = "/login";
+      }
+    });
+  });
 });
-  
-  

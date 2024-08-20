@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
 
@@ -37,30 +37,17 @@
             <div class="headerImage">
                 <img src="/assets/mypage/header.jpg" alt="">
                 <div class="text-overlay">
-                    <h1>Sign In</h1>
+                    <h1>Dashboard</h1>
                 </div>
             </div>
         </div>
         <div class="form-container">
-            <form class="login-form">
-                <div class="login-indicator"></div>
-                <div class="username-form">
-                    <b>USERNAME</b>
-                    <input type="text" required>
-                </div>
-                <div class="password-form">
-                    <b>PASSWORD</b>
-                    <input type="password" required>
-                </div>
+            <form class="login-form" action="/logout" method="POST">
+                <div class="login-indicator">Login Succeed</div>
                 <div class="bottom-form">
-                    <button type="submit">Login</button>
-                    <p>Forgot Password?</p>
+                    <button type="submit" id="sign-outButton">Sign Out</button>
                 </div>
             </form>
-            <div class="other-text">
-                <p>Privacy</p>
-                <p>Terms</p>
-            </div>
         </div>
     </main>
 
@@ -69,7 +56,7 @@
         <p>(c) Dummy</p>
     </footer>
 
-    <script src="js/login.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>

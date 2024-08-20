@@ -1,5 +1,3 @@
-const express = require("express");
-
 const logout = async (req, res) => {
   try {
     req.session.status = null;
@@ -7,7 +5,7 @@ const logout = async (req, res) => {
       if (err) {
         return res.status(500).send("Failed to log out.");
       }
-      res.clearCookie('connect.sid'); 
+      res.clearCookie('connect.sid');
       res.redirect('/');
     });
   } catch (error) {

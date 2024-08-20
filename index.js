@@ -8,7 +8,12 @@ const app = express();
 app.use(session({
   secret: 'LH and creation',
   resave: false,
-  saveUninitialized: false 
+  saveUninitialized: false,
+  cookie: {
+    secure: false, 
+    httpOnly: true,
+    maxAge: 3600000 // 60 minutes or 1 hour
+  }
 }));
 
 app.use(express.urlencoded({ extended: true }));

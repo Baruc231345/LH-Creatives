@@ -7,7 +7,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 40px;
+  gap: 60px;
 }
 
 .grid-header {
@@ -36,10 +36,6 @@ header h1 {
 header nav {
   grid-column: 7 / span 6;
   justify-self: end;
-  display: flex;
-}
-
-header nav {
   display: flex;
 }
 
@@ -286,7 +282,7 @@ main > b {
   grid-column: span 12;
   text-align: center;
   font-size: 46px;
-  padding-top: 20px;
+  padding-top: 60px;
 }
 
 main > h1 {
@@ -472,6 +468,7 @@ main > h1:active {
     overflow: hidden;
     background-color: brown;
     min-height: 400px;
+    padding-top: 30px;
   }
 
   .aboutuscontainer {

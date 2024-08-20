@@ -32,7 +32,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100%; 
   height: auto; 
   min-height: 300px; 
 }
@@ -154,46 +154,20 @@ footer p {
 }
 
 .login-indicator {
-  display: none;
+
   padding: 10px;
   align-items: center;
   justify-content: center;
-  border-color: #fff200;
-  border: 1px solid #fff200;
-  border-radius: 2px;
-}
-
-.login-indicator.success {
   background-color: #D4EDDA;
   border-color: #C3E6CB; 
+  border-radius: 2px;
+  width: 300px;
 }
 
-.login-indicator.failure {
-  background-color: #f8d7da;
-  border-color: #f5c6cb; 
-}
-
-.login-form input,
-.login-form button {
-  padding: 10px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.login-form input {
-  width: 90%;
-}
-
-.login-form button {
-  background-color: yellow;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
 
 .bottom-form {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
