@@ -10,8 +10,6 @@
 </head>
 
 <body>
-    <button id="prevBtn">Prev</button>
-    <button id="nextBtn">Next</button>
 
     <header class="grid-header">
         <h1>Dummy</h1>
@@ -26,12 +24,12 @@
         <div class="hamburger" onclick="toggleDrawer()">
             <i class="fas fa-bars"></i>
         </div>
-        <div class="drawer" id="drawer">
+        <div class="drawer" id="drawer" onclick="handleDrawerClick()">
             <a class="active">Service</a>
             <a class="about">About Us</a>
             <a class="news">News</a>
             <a class="contact">Contact</a>
-            <a class="signin">Sign In</a>
+            <a href="/login">Sign In</a>
         </div>
     </header>
 
@@ -43,6 +41,11 @@
                 <img src="/assets/visual/slide02.jpg" alt="">
                 <img src="/assets/visual/slide03.jpg" alt="">
                 <img src="/assets/visual/slide01.jpg" id="firstImage" alt="">
+            </div>
+
+            <div class="gray-overlay">
+                <i id="prevBtn" class="fa-solid fa-chevron-left"></i>
+                <i id="nextBtn" class="fa-solid fa-chevron-right"></i>
             </div>
         </div>
 

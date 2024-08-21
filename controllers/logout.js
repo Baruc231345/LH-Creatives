@@ -6,6 +6,7 @@ const logout = async (req, res) => {
         return res.status(500).send("Failed to log out.");
       }
       res.clearCookie('connect.sid');
+      res.clearCookie("token")
       res.redirect('/');
     });
   } catch (error) {

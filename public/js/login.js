@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 loginIndicator.textContent = "Login Succeed";
                 loginIndicator.classList.add("success");
                 loginIndicator.classList.remove("failure");
+                loginIndicator.style.display = "block";
+                setTimeout(() => {
+                    window.location.href = "/dashboard";
+                }, 2000); // 2000 ms = 2 seconds
             } else {
                 loginIndicator.textContent = "Login Failed";
                 loginIndicator.classList.add("failure");
@@ -33,8 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-// Hambuirger Drawer
 
 window.addEventListener("DOMContentLoaded", function () {
     const check = document.getElementById("check");

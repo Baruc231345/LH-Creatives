@@ -81,6 +81,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Attach click event listeners to drawer links
+  const drawerLinks = document.querySelectorAll(".drawer a");
+  drawerLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      switch (link.className) {
+        case "active":
+          handleScroll(serviceSection);
+          break;
+        case "about":
+          handleScroll(aboutSection);
+          break;
+        case "news":
+          handleScroll(newsSection);
+          break;
+        case "contact":
+          handleScroll(contactSection);
+          break;
+        default:
+          window.location.href = "/login";
+      }
+      toggleDrawer();
+    });
+  });
+
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
