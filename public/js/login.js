@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             if (data.status === "success") {
                 loginIndicator.textContent = "Login Succeed";
-                loginIndicator.classList.add("success");
+                loginIndicator.classList.add("success");                                      
                 loginIndicator.classList.remove("failure");
                 loginIndicator.style.display = "block";
                 setTimeout(() => {
                     window.location.href = "/dashboard";
-                }, 2000); // 2000 ms = 2 seconds
+                }, 2000); 
             } else {
                 loginIndicator.textContent = "Login Failed";
                 loginIndicator.classList.add("failure");

@@ -11,15 +11,14 @@ router.use(express.static(pub_path));
 
 // Routes
 router.get('/login', (req, res) => {
+  if (req.session.status === "success"){
+    return res.redirect("/dashboard");
+  } 
   res.sendFile(path.join(pub_path, 'login.html'));
 });
 
 router.get('/dashboard', authCookieJwt, (req, res) => {
   res.sendFile(path.join(pub_path, 'dashboard.html'));
-});
-
-router.get('/signin', (req, res) => {
-  res.sendFile(path.join(pub_path, 'signin.html'));
 });
 
 router.get("/", (req, res) => {

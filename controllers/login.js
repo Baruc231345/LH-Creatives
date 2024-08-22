@@ -40,18 +40,20 @@ const login = async (req, res) => {
 
       req.session.status = "success";
       res.json({ message: "Login successful", status: req.session.status });
-
     } else {
       const invalidError = "Invalid Name or Password!!";
       console.log(invalidError);
       req.session.status = "failure";
-      res.status(401).json({ message: invalidError, status: req.session.status });
+      res
+        .status(401)
+        .json({ message: invalidError, status: req.session.status });
     }
-
   } catch (error) {
     console.error("Query Error:", error);
     req.session.status = "error";
-    res.status(500).json({ message: "Internal Error", status: req.session.status });
+    res
+      .status(500)
+      .json({ message: "Internal Error", status: req.session.status });
   }
 };
 
